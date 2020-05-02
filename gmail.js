@@ -27,7 +27,6 @@ var appData = {
       "mailbox": "inbox",
       "priority": true,
       "starred": true,
-      "sent": true,
       "timeStamp": "1985-05-22 05:05:13",
       "content": {
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -42,7 +41,6 @@ var appData = {
       "mailbox": "drafts",
       "priority": true,
       "starred": false,
-      "sent": false,
       "timeStamp": "",
       "content": {
         "text": "Dear Sir, I object strongly to the obvious lavatorial turn this show has already taken. Why do we never hear about the good things in Britain, like Mary Bignall's wonderful jump in 1964? Yours etc., Ken Voyeur. ",
@@ -57,7 +55,6 @@ var appData = {
       "mailbox": "inbox",
       "priority": false,
       "starred": false,
-      "sent": true,
       "timeStamp": "2198-03-29 05:28:08",
       "content": {
         "text": "Quos necessitatibus alias eos vero nesciunt deserunt, repellendus unde laudantium iure consectetur quo cum enim ab temporibus quisquam praesentium pariatur modi accusamus. Hic expedita, unde ducimus velit at earum debitis commodi qui a veritatis quas, ab temporibus beatae tempora nihil ipsum, ex dolore. Neque, adipisci fugit labore esse quibusdam veritatis mollitia consequatur, laudantium reiciendis voluptates ad non tenetur officia amet itaque, modi, maxime quos facilis cumque eos. Voluptas fuga inventore dignissimos perspiciatis beatae necessitatibus, porro ratione veritatis velit.",
@@ -72,7 +69,6 @@ var appData = {
       "mailbox": "sent",
       "priority": false,
       "starred": true,
-      "sent": false,
       "timeStamp": "",
       "content": {
         "text": "Sequi mollitia earum, itaque nostrum! Minus eius et maiores quo ad, fugit porro officia quam voluptates excepturi sit cupiditate libero doloribus temporibus adipisci molestias tempora, dolore animi quod consequatur nemo deserunt, dignissimos accusamus voluptate sed.",
@@ -87,7 +83,6 @@ var appData = {
       "mailbox": "spam",
       "priority": true,
       "starred": false,
-      "sent": true,
       "timeStamp": "1992-06-26 22:38:03",
       "content": {
         "text": `Attn,
@@ -130,7 +125,6 @@ appData.emails.push({
   "mailbox": "drafts",
   "priority": true,
   "starred": false,
-  "sent": false,
   "timeStamp": "",
   "content": {
     "text": "I'll get right on that",
