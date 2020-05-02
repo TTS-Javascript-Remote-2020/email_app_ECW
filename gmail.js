@@ -33,7 +33,7 @@ var appData = {
         "attachments": [ "lorem.gif", "kitten.jpeg" ],
       },
     }, {
-      "from": "Elliott <me@gmail.com>",
+      "from": "me@gmail.com",
       "to": [ "producer@python.com" ],
       "cc": [],
       "bcc": [],
@@ -47,7 +47,7 @@ var appData = {
         "attachments": [ "signature.png", "mary_bingall.gif" ],
       },
     }, {
-      "from": "Mom <elliottsmom@gmail.com",
+      "from": "elliottsmom@gmail.com",
       "to": [ "me@gmail.com" ],
       "cc": [ "dad@gmail.com", "brother@gmail.com", "sister@gmail.com", "aunt1@gmail.com", "aunt2@gmail.com", "cousirick@gmail.com", "cousintiffany@gmail.com" ],
       "bcc": [],
@@ -61,7 +61,7 @@ var appData = {
         "attachments": [ "meme1.jpg", "meme2.jpg", "facebook1.jpg", "facebook2.jpg" ],
       },
     }, {
-      "from": "Elliott <me@gmail.com>",
+      "from": "me@gmail.com",
       "to": [ "support@amazon.com" ],
       "cc": [ "not.a.scam@hotmail.com" ],
       "bcc": [ "melchoir.the.lawyer@melchoirmelchoirandmelchoir.com" ],
@@ -75,7 +75,7 @@ var appData = {
         "attachments": [ "signature.png" ],
       },
     }, {
-      "from": "Mr. Hafez Ghanem <test@comchoice.co.ke>",
+      "from": "test@comchoice.co.ke",
       "to": [ "me@gmail.com" ],
       "cc": [],
       "bcc": [],
@@ -109,16 +109,21 @@ Mr. Hafez Ghanem`,
   ],
 };
 
+console.log("Your different mailboxes are:");
 console.log(appData.mailboxes.join(', '));
+
+console.log("All of your emails:");
 console.log(appData.emails);
+
+console.log(`Your second email (from ${appData.emails[1].from}) is in the mailbox: ${appData.emails[1].mailbox} and reads:`)
 console.log(appData.emails[1].content.text);
-console.log(appData.emails[1].mailbox);
 appData.emails[1].mailbox = "sent";
-console.log(appData.emails[1].mailbox);
 appData.emails[1].timeStamp = new Date().toUTCString();
+console.log(`Your second email now is in the mailbox: ${appData.emails[1].mailbox} as of ${appData.emails[1].timeStamp}`);
+
 appData.emails.push({
-  "from": "Elliott <me@gmail.com>",
-  "to": [ "El Jefe <bossman@gmail.com>" ],
+  "from": "me@gmail.com",
+  "to": [ "bossman@gmail.com" ],
   "cc": [],
   "bcc": [],
   "subject": "RE: Task",
@@ -127,10 +132,44 @@ appData.emails.push({
   "starred": false,
   "timeStamp": "",
   "content": {
-    "text": "I'll get right on that",
+    "text": "I'll get right on that.",
     "attachments": [ "signature.jpg" ],
   },
 });
-const email = appData.emails[2];
-let familyGroup = email.to.concat(email.cc);
+
+const momsEmail = appData.emails[2];
+let familyGroup = momsEmail.to.concat(momsEmail.cc);
+console.log("Your Family Group consists of:");
 console.log(familyGroup);
+
+const numberOfEmails = appData.emails.length;
+
+const starredEmails = [];
+for (let i = 0; i < numberOfEmails; i++) {
+  const email = appData.emails[i];
+  if (email.starred === true){
+    starredEmails.push(email);
+  }
+}
+console.log("Your starred emails:")
+console.log(starredEmails);
+
+const priorityEmails = [];
+for (let i = 0; i < numberOfEmails; i++) {
+  const email = appData.emails[i];
+  if (email.priority === true) {
+    priorityEmails.push(email);
+  }
+}
+console.log("Your priority emails:");
+console.log(priorityEmails);
+
+const blockedEmailAddresses = [];
+for (let i = 0; i < numberOfEmails; i++) {
+  const email = appData.emails[i];
+  if (email.mailbox === "spam") {
+    blockedEmailAddresses.push(email.from);
+  }
+}
+console.log("Your blocked email addresses:");
+console.log(blockedEmailAddresses);
