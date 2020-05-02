@@ -113,8 +113,8 @@ console.log(appData.mailboxes.join(', '));
 console.log(appData.emails);
 console.log(appData.emails[1].content.text);
 console.log(appData.emails[1].mailbox);
-appData.emails[1].mailbox = "sent"";
-console.log(appData.emails[1].mailbox;
+appData.emails[1].mailbox = "sent";
+console.log(appData.emails[1].mailbox);
 appData.emails[1].timeStamp = new Date().toUTCString();
 appData.emails.push({
   "from": "Elliott <me@gmail.com>",
@@ -129,6 +129,7 @@ appData.emails.push({
   "content": {
     "text": "I'll get right on that",
     "attachments": [ "signature.jpg" ],
+  },
 });
 const email = appData.emails[2];
 let familyGroup = email.to.concat(email.cc);
