@@ -1,4 +1,4 @@
-# gmail_homework_E_C_W
+# email_app_E_C_W
 
 1.  Create an object that models the data of your favorite email application.
 
